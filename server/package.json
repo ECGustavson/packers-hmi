@@ -1,0 +1,21 @@
+{
+  "name": "hmi-server",
+  "private": true,
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ads-client": "^2.0.0",
+    "express": "^4.21.0",
+    "modbus-serial": "^8.0.25",
+    "tsx": "^4.19.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.5.12",
+    "typescript": "^5.6.0"
+  }
+}

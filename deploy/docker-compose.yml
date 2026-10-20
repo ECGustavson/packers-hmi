@@ -1,0 +1,16 @@
+services:
+  hmi:
+    image: hmi:latest
+    container_name: hmi
+    restart: unless-stopped       # starts at boot, restarts on crash
+    network_mode: host            # lets the container reach TwinCAT's ADS router on localhost
+    init: true                    # clean shutdown on docker stop
+    env_file: .env                # per-machine settings, kept on the IPC
+    environment:
+      WEB_DIR: /app/web/dist
+      DATA_DIR: /app/server/data
+    volumes:
+      - ./data:/app/server/data   # user accounts, kept on the IPC across deploys
+    logging:                      # cap log size to protect the flash card
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }

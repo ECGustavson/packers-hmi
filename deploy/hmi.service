@@ -1,0 +1,14 @@
+[Unit]
+Description=HMI server
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/hmi/server
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=3
+Environment=NODE_ENV=production
+# User=hmi   # optional: run as a non-root user
+
+[Install]
+WantedBy=multi-user.target

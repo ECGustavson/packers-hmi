@@ -1,0 +1,14 @@
+{
+  "// Modbus tag map": "Used when DRIVER=modbus. Keys starting with // are comments.",
+  "// Names": "Any name you like; screens use it as the tag. These match the demo screen.",
+  "// Addresses": "CLICK PLC addresses shown (C1 = 016385, DS1 = 400001, DD1 = 416385, DF1 = 428673). Check yours in the PLC software.",
+  "// Types": "BOOL (coils 0xxxxx, inputs 1xxxxx), INT, UINT, DINT, UDINT, REAL (registers 3xxxxx, 4xxxxx).",
+  "// Analog": "Add min, max and eu to show a number as ST_Analog (for SetpointEntry and AnalogReadout).",
+
+  "GVL_HMI.bStartCmd":   { "address": "016385", "writable": true },
+  "GVL_HMI.bStopCmd":    { "address": "016386", "writable": true },
+  "GVL_HMI.bRunning":    { "address": "016387" },
+  "GVL_HMI.nBatchCount": { "address": "416385", "type": "DINT" },
+  "GVL_HMI.stSpeedSP":   { "address": "428673", "type": "REAL", "writable": true, "min": 0, "max": 500, "eu": "ft/min" },
+  "GVL_HMI.stSpeedPV":   { "address": "428675", "type": "REAL", "min": 0, "max": 600, "eu": "ft/min" }
+}
