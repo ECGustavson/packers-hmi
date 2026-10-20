@@ -5,10 +5,10 @@
   "// Types": "BOOL (coils 0xxxxx, inputs 1xxxxx), INT, UINT, DINT, UDINT, REAL (registers 3xxxxx, 4xxxxx).",
   "// Analog": "Add min, max and eu to show a number as ST_Analog (for SetpointEntry and AnalogReadout).",
 
-  "GVL_HMI.bStartCmd":   { "address": "016385", "writable": true },
-  "GVL_HMI.bStopCmd":    { "address": "016386", "writable": true },
-  "GVL_HMI.bRunning":    { "address": "016387" },
-  "GVL_HMI.nBatchCount": { "address": "416385", "type": "DINT" },
-  "GVL_HMI.stSpeedSP":   { "address": "428673", "type": "REAL", "writable": true, "min": 0, "max": 500, "eu": "ft/min" },
-  "GVL_HMI.stSpeedPV":   { "address": "428675", "type": "REAL", "min": 0, "max": 600, "eu": "ft/min" }
+  "btnStart":             { "address": "016385", "writable": true },
+  "btnStop":              { "address": "016386", "writable": true },
+  "bRunning":             { "address": "016387" },
+  "nBatchCount":          { "address": "416385", "type": "DINT" },
+  "fSpeedSP":             { "address": "428673", "type": "REAL", "writable": true, "min": 0, "max": 500, "eu": "ft/min" },
+  "fSpeedPV":             { "address": "428675", "type": "REAL", "min": 0, "max": 600, "eu": "ft/min" }
 }
